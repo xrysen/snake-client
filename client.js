@@ -15,6 +15,11 @@ conn.on('data', (data) => {
   console.log('Server says: ', data);
 });
 
+conn.on('connect', () => {
+  console.log("Connected");
+  conn.write("Name: SMO");
+});
+
   return conn;
 }
 
